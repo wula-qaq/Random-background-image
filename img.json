@@ -1,0 +1,27 @@
+{
+    "pc_img_url": {
+        "樱花": "https://www.dmoe.cc/random.php",
+        "夏沫": "https://cdn.seovx.com/d/?mom=302",
+        "保罗": "https://api.paugram.com/wallpaper",
+        "岁月小筑": "https://img.xjh.me/random_img.php",
+        "搏天": "https://api.btstu.cn/sjbz/api.php?lx=dongman",
+        "东方Project": "https://img.paulzzh.com/touhou/random?size=pc"
+    },
+    "mobile_img_url": {
+        "搏天": "https://api.btstu.cn/sjbz/api.php?lx=dongman&method=mobile",
+        "东方Project": "https://img.paulzzh.com/touhou/random?size=wap"
+    },
+    "东方Project": {
+        "Project": "https://img.paulzzh.com/touhou/random?size=all"
+    },
+    "其他随机": {
+        "樱花": "https://www.dmoe.cc/random.php",
+        "夏沫": "https://cdn.seovx.com/d/?mom=302",
+        "保罗": "https://api.paugram.com/wallpaper",
+        "岁月小筑": "https://img.xjh.me/random_img.php",
+        "搏天pc": "https://api.btstu.cn/sjbz/api.php?lx=dongman",
+        "搏天mobile": "https://api.btstu.cn/sjbz/api.php?lx=dongman&method=mobile",
+        "搏天zsy": "https://api.btstu.cn/sjbz/api.php?lx=dongman&method=zxy",
+        "东方Project": "https://img.paulzzh.com/touhou/random?size=all"
+    }
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>随机背景图</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer {
+            margin-top: auto;
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            width: 100%;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 主要内容区域 -->
+    <div id="main-content">
+        <!-- 可能的背景图和其他内容 -->
+    </div>
+
+    <!-- 底部内容 -->
+    <div class="footer">
+        <a href="https://alist.zki0.cn" target="_blank" style="color: white; text-decoration: none;">随机背景图 2023--2024
+            alist.zki0.cn 享有此网页的最终解释权</a>
+        </br>
+        <sapn>
+            <p>其他项目</p>
+            <a href="https://alist.zki0.cn" target="_blank" style="color: white; text-decoration: none;">其他项目</a>
+            <a href="https://alist.zki0.cn" target="_blank" style="color: white; text-decoration: none;">其他项目</a>
+            <a href="https://alist.zki0.cn" target="_blank" style="color: white; text-decoration: none;">其他项目</a>
+            <a href="https://alist.zki0.cn" target="_blank" style="color: white; text-decoration: none;">其他项目</a>
+            <a href="https://alist.zki0.cn" target="_blank" style="color: white; text-decoration: none;">其他项目</a>
+        </sapn>
+
+    </div>
+    <script>
+        // 定义图片 API 列表
+        const imgUrls = {
+            "pc_img_url": {
+                "樱花": "https://www.dmoe.cc/random.php",
+                "夏沫": "https://cdn.seovx.com/d/?mom=302",
+                "保罗": "https://api.paugram.com/wallpaper",
+                "岁月小筑": "https://img.xjh.me/random_img.php",
+                "搏天": "https://api.btstu.cn/sjbz/api.php?lx=dongman",
+                "东方Project": "https://img.paulzzh.com/touhou/random?size=pc"
+            },
+            "mobile_img_url": {
+                "搏天": "https://api.btstu.cn/sjbz/api.php?lx=dongman&method=mobile",
+                "东方Project": "https://img.paulzzh.com/touhou/random?size=wap"
+            }
+        };
+
+        // 根据 User-Agent 判断设备类型
+        const userAgent = navigator.userAgent.toLowerCase();
+        const isMobile = /iphone|ipad|ipod|android/.test(userAgent);
+
+        // 选择要使用的图片 URL
+        let selectedUrl;
+        if (isMobile) {
+            // 移动设备背景
+            const mobileKeys = Object.keys(imgUrls.mobile_img_url);
+            selectedUrl = imgUrls.mobile_img_url[mobileKeys[Math.floor(Math.random() * mobileKeys.length)]];
+        } else {
+            // 桌面背景
+            const pcKeys = Object.keys(imgUrls.pc_img_url);
+            selectedUrl = imgUrls.pc_img_url[pcKeys[Math.floor(Math.random() * pcKeys.length)]];
+        }
+
+        // 设置背景图片
+        document.body.style.backgroundImage = `url('${selectedUrl}')`;
+
+    </script>
+</body>
+
+</html>
